@@ -10,41 +10,41 @@
 #include "Vex_Competition_Includes.c"
 
 void setLeft(int speed) {
-    motor[leftFront] = speed;
-    motor[leftBack] = speed;
+    motor[leftFront] = speed;//set leftFront motor to the speed specified when the function is called
+    motor[leftBack] = speed;//set leftBack motor to the speed specified when the function is called
 }
 
 void setRight(int speed) {
-    motor[rightFront] = speed;
-    motor[rightBack] = speed;
+    motor[rightFront] = speed;//set rightFront motor to the speed specified when the function is called
+    motor[rightBack] = speed;//set rightBack motor to the speed specified when the function is called
 }
 
 void setAll(int speed) {
-    setLeft(speed);
-    setRight(speed);
+    setLeft(speed);//Call setLeft function with the speed specified when the function is called
+    setRight(speed);//Call setRight function with the speed specified when the function is called
 }
 
 void forward (int time, int mspeed){
-	playSound(soundFastUpwardTones);
-    setAll(-mspeed);
-    delay(time);
-    setAll(0);
+    playSound(soundFastUpwardTones);//play some sick tunes
+    setAll(-mspeed);//set all the motors to teh speed specified when the function is called
+    delay(time);//wait
+    setAll(0);//set all motors to 0
 }
 
 void turnl (int time, int dif) { 
-	playSound(soundBlip);
-    setLeft(-127 - dif);
-    setRight(-127);
-    delay(time);
-    setAll(0);
+    playSound(soundBlip);//play some sick tunes
+    setLeft(-127 - dif);//set total speed and difference for turning
+    setRight(-127);//set other side to max speed
+    delay(time);//wait
+    setAll(0);//set all motors to 0
 }
 
 void turnr (int time, int dif) {
-    playSound(soundBeepBeep);
-    setRight(-127 + dif);
-    setLeft(-127);
-    delay(time);
-    setAll(0);
+    playSound(soundBeepBeep);//play some sick tunes
+    setRight(-127 + dif);//set total speed and difference for turning
+    setLeft(-127);//set other side to max speed
+    delay(time);//wait
+    setAll(0);//set all motors to 0
 }
 
 void pre_auton(){
