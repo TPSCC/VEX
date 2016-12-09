@@ -57,6 +57,7 @@ task autonomous(){
 }
 
 task usercontrol(){
+	/*
 	int X2 = 0, Y1 = 0, X1 = 0, threshold = 15;
 	while(true){
 		//Create deadzone for Y1/Ch3
@@ -79,5 +80,10 @@ task usercontrol(){
 		motor[backRight] =  Y1 - X2 + X1;
 		motor[frontLeft] = Y1 + X2 + X1;
 		motor[backLeft] =  Y1 + X2 - X1;
-	}
+	}*/
+	motor[frontRight] = Y2;
+	motor[frontLeft] = Y3;
+	motor[backLeft] = Y3;
+	motor[backRight] = Y2;
+		
 }
