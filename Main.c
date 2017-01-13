@@ -81,9 +81,14 @@ task usercontrol(){
 		motor[frontLeft] = Y1 + X2 + X1;
 		motor[backLeft] =  Y1 + X2 - X1;
 	}*/
-	motor[frontRight] = Y2;
-	motor[frontLeft] = Y3;
-	motor[backLeft] = Y3;
-	motor[backRight] = Y2;
-		
+	while(true){
+		motor[frontRight] = Y2;
+		motor[frontLeft] = Y3;
+		motor[backLeft] = Y3;
+		motor[backRight] = Y2;
+		if(vexRT[Btn6U] == 1){
+			motor[port8]=127;
+			motor[port9]=127;
+		}
+	}
 }
