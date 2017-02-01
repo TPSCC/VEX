@@ -4,6 +4,10 @@
 #pragma config(Motor,  port2,           leftBack,      tmotorVex393_MC29, openLoop)
 #pragma config(Motor,  port9,           rightBack,     tmotorVex393_MC29, openLoop)
 #pragma config(Motor,  port10,          rightFront,    tmotorVex393_HBridge, openLoop)
+#pragma config(Motor,  port3,           leftTopLift,      tmotorVex393_MC29, openLoop)
+#pragma config(Motor,  port4,           leftBottomLift,     tmotorVex393_MC29, openLoop)
+#pragma config(Motor,  port5,           rightTopLift,      tmotorVex393_MC29, openLoop)
+#pragma config(Motor,  port6,           rightBottomLift,     tmotorVex393_MC29, openLoop)
 #pragma platform(VEX2)
 #pragma competitionControl(Competition)
 
@@ -87,8 +91,16 @@ task usercontrol(){
 		motor[backLeft] = Y3;
 		motor[backRight] = Y2;
 		if(vexRT[Btn6U] == 1){
-			motor[port8]=127;
-			motor[port9]=127;
+			motor[leftTopLift] = 11;
+			motor[leftBottomLift] = 127;
+			motor[rightTopLift] = 11;
+			motor[rightBottomLift] = 127;
+		}
+		if(vexRT[Btn6D] == 1){
+			motor[leftTopLift] = -11;
+			motor[leftBottomLift] = -127;
+			motor[rightTopLift] = -11;
+			motor[rightBottomLift] = -127;
 		}
 	}
 }
@@ -99,5 +111,7 @@ spicy memes
 u fucboi
 initialdmasterrace
 kthxbai
+i thot u wer gon 2 kys
+yes tonite
 */
 
