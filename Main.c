@@ -91,15 +91,15 @@ task usercontrol(){
 		motor[backLeft] = Y3;
 		motor[backRight] = Y2;
 		if(vexRT[Btn6U] == 1){
-			motor[leftTopLift] = 11;
-			motor[leftBottomLift] = 127;
-			motor[rightTopLift] = 11;
+			motor[leftTopLift] = -54;
+			motor[leftBottomLift] = -127;
+			motor[rightTopLift] = 54;
 			motor[rightBottomLift] = 127;
 		}
 		if(vexRT[Btn6D] == 1){
-			motor[leftTopLift] = -11;
-			motor[leftBottomLift] = -127;
-			motor[rightTopLift] = -11;
+			motor[leftTopLift] = 54;
+			motor[leftBottomLift] = 127;
+			motor[rightTopLift] = -54;
 			motor[rightBottomLift] = -127;
 		}
 	}
