@@ -86,10 +86,10 @@ task usercontrol(){
 		motor[backLeft] =  Y1 + X2 - X1;
 	}*/
 	while(true){
-		motor[frontRight] = Y2;
-		motor[frontLeft] = Y3;
-		motor[backLeft] = Y3;
-		motor[backRight] = Y2;
+		motor[frontRight] = vexRT[Ch2];
+		motor[frontLeft] = vexRT[Ch3];
+		motor[backLeft] = vexRT[Ch3];
+		motor[backRight] = vexRT[Ch2];
 		if(vexRT[Btn6U] == 1){
 			motor[leftTopLift] = -54;
 			motor[leftBottomLift] = -127;
