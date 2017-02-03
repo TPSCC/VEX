@@ -96,6 +96,12 @@ task usercontrol(){
 			motor[rightTopLift] = 54;
 			motor[rightBottomLift] = 127;
 		}
+		if (vexRT[Btn6U] == 0&& vexRT[Btn6D] == 0){
+			motor[leftTopLift] = 0;
+			motor[leftBottomLift] = 0;
+			motor[rightTopLift] = 0;
+			motor[rightBottomLift] = 0;
+		}
 		if(vexRT[Btn6D] == 1){
 			motor[leftTopLift] = 54;
 			motor[leftBottomLift] = 127;
